@@ -22,12 +22,19 @@ const onExec = (input: string) => {
   const isError = output instanceof Error;
   tabs.value[currentTab.value].history.push({ input, output, isError });
 };
+
+onMounted(() => {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js', { scope: '.' });
+  }
+});
 </script>
 
 <template>
   <main>
     <header>
       <AppPreference />
+      <div class="drag" />
     </header>
 
     <AppTabs
@@ -45,12 +52,26 @@ const onExec = (input: string) => {
 <style lang="scss" scoped>
 main {
   display: grid;
-  grid-template-rows: auto auto minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr);
+  padding-top: 50px;
   height: 100dvh;
 }
 
 header {
+  background: rgb(var(--color-gray-100));
   display: flex;
-  align-items: start;
+  align-items: center;
+  position: fixed;
+  left: env(titlebar-area-x, 0);
+  top: env(titlebar-area-y, 0);
+  height: 50px;
+  width: 100%;
+  padding-right: calc(100% - env(titlebar-area-width, 100%));
+
+  .drag {
+    align-self: stretch;
+    flex-grow: 1;
+    -webkit-app-region: drag;
+  }
 }
 </style>

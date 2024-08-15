@@ -17,7 +17,7 @@ const isDark = computed({
     <UButton
       size="xl"
       icon="i-heroicons-adjustments-horizontal"
-      variant="ghost"
+      variant="link"
     />
 
     <template #panel>

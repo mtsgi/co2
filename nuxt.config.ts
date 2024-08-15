@@ -7,9 +7,10 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-08-12',
   app: {
     head: {
-      title: 'Co2',
+      title: 'co2',
       link: [
         { rel: 'manifest', href: 'manifest.json' },
+        { rel: 'apple-touch-icon', href: 'apple-touch-icon.png', sizes: '180x180' },
       ],
     },
   },

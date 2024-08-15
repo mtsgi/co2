@@ -1,6 +1,8 @@
 # co2
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+![co2](banner.png)
+
+PWA JavaScript Console
 
 ## Setup
 
@@ -25,5 +27,3 @@ Build the application for production:
 ```bash
 bun run generate
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
