@@ -77,6 +77,7 @@ const selectSuggest = (suggest: string) => {
         :padded="true"
         variant="none"
         size="xl"
+        placeholder="Input"
         class="form__input"
         @keydown.enter="onEnter"
       />
@@ -143,6 +144,7 @@ const selectSuggest = (suggest: string) => {
   .form {
     border-radius: 0;
     position: relative;
+    border-top: 2px solid rgb(var(--color-primary-500));
 
     &__input {
       flex-grow: 1;
