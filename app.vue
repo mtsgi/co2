@@ -25,7 +25,9 @@ const onExec = (input: string) => {
 
 onMounted(() => {
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js', { scope: '.' });
+    navigator.serviceWorker.register('sw.js', { scope: '.' })
+      .then(registration => console.log({ registration }))
+      .catch(error => console.log({ error }));
   }
 });
 </script>

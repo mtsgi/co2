@@ -1,6 +1,3 @@
-/// <reference no-default-lib="true"/>
-/// <reference lib="WebWorker" />
-
 /** @type { ServiceWorkerGlobalScope } */
 const context = self;
 
