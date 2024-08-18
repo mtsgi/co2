@@ -35,8 +35,12 @@ onMounted(() => {
 <template>
   <main>
     <header>
-      <AppPreference />
+      <img
+        src="/any.png"
+        alt="co2"
+      >
       <div class="drag" />
+      <AppPreference />
     </header>
 
     <AppTabs
@@ -69,6 +73,13 @@ header {
   height: 50px;
   width: 100%;
   padding-right: calc(100% - env(titlebar-area-width, 100%));
+
+  img {
+    height: 30px;
+    width: 30px;
+    margin: 0 10px;
+    -webkit-app-region: drag;
+  }
 
   .drag {
     align-self: stretch;
